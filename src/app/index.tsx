@@ -1998,6 +1998,14 @@ export default function App() {
               )}
             </View>
 
+            <TouchableOpacity style={[styles.cardCalc, { borderLeftColor: '#FF9500' }]} onPress={() => setModalRapidoVisible(true)}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.cardCalcTitulo}>⚡ Gasto Rápido</Text>
+                <Text style={styles.cardCalcSub}>Registre uma compra de hoje em poucos toques</Text>
+              </View>
+              <Text style={{ fontSize: 20, color: c.mudo }}>›</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity style={[styles.cardCalc, { borderLeftColor: '#34C759' }]} onPress={() => setModalMetasVisible(true)}>
               <View style={{ flex: 1 }}>
                 <Text style={styles.cardCalcTitulo}>🎯 Metas de Economia</Text>
@@ -2784,12 +2792,6 @@ export default function App() {
             </View>
           </View>
         </Modal>
-        {carregado && (
-          <TouchableOpacity style={styles.fab} onPress={() => setModalRapidoVisible(true)} accessibilityLabel="Lançar gasto rápido">
-            <Text style={styles.fabTxt}>+</Text>
-          </TouchableOpacity>
-        )}
-
       </SafeAreaView>
     </TemaCtx.Provider>
   );
